@@ -5,8 +5,7 @@ use \App\Models\Clients\Client;
 use \App\Models\Clients\Unit;
 use \App\Models\Users\Collaborator;
 use \App\Models\Suppliers\Supplier;
-use \App\Models\Commons\Requisition;
-use \App\Models\Commons\RequisitionProduct;
+use App\Models\Requisitions\Requisition;
 use \App\Models\Commons\Product;
 
 class TestSeeder extends Seeder
@@ -57,8 +56,6 @@ class TestSeeder extends Seeder
 	    factory( Requisition::class, 25 )->create();
 	    $this->command->info( 'Requisition complete ...' );
 
-	    factory( RequisitionProduct::class, 150 )->create();
-	    $this->command->info( 'RequisitionProduct complete ...' );
 
 	    $this->command->info( "*** Importacao IMPORTSEEDER realizada com sucesso em " . round( ( microtime( true ) - $start ), 3 ) . "s ***" );
 

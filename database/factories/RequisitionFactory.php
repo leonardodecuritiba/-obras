@@ -6,7 +6,7 @@ $factory->define(\App\Models\Requisitions\Requisition::class, function (Faker $f
 	$status = $faker->numberBetween( $min = 1, $max = 5);
     return [
 	    'job_id'            => $faker->numberBetween( $min = 1, $max = 50 ),
-	    'collaborator_id'   => $faker->numberBetween( $min = 1, $max = 5 ),
+	    'author_id'         => $faker->numberBetween( $min = 1, $max = 5 ),
 	    'group_id'          => $faker->numberBetween( $min = 1, $max = 5 ),
 	    'subgroup_id'       => $faker->numberBetween( $min = 1, $max = 10 ),
 	    'supplier_id'       => $faker->numberBetween( $min = 1, $max = 20 ),
